@@ -1,0 +1,43 @@
+2025-01-13 15:08:05,660 - INFO - Iniciando a aplicação.
+2025-01-13 15:08:05,660 - INFO - Baixando arquivo do GitHub: https://raw.githubusercontent.com/RogerioLS/pipeline_data_layer/refs/heads/main/data/train.csv
+2025-01-13 15:08:05,681 - INFO - Arquivo baixado e salvo localmente como preco_de_casas.csv
+2025-01-13 15:08:05,712 - INFO - Found credentials from IAM Role: BaseNotebookInstanceEc2InstanceRole
+2025-01-13 15:08:05,804 - INFO - Conexão com o bucket 'preco-de-casas-projeto' configurada com sucesso.
+2025-01-13 15:08:05,804 - INFO - Subindo arquivo preco_de_casas.csv para S3 em 'bronze/preco_de_casas.csv'
+2025-01-13 15:08:05,804 - INFO - Iniciando upload do arquivo 'preco_de_casas.csv' para 'bronze/preco_de_casas.csv'...
+2025-01-13 15:08:05,934 - INFO - Arquivo 'preco_de_casas.csv' enviado com sucesso para 'bronze/preco_de_casas.csv'.
+2025-01-13 15:08:05,935 - INFO - Arquivo preco_de_casas.csv enviado com sucesso para o bucket S3.
+2025-01-13 15:08:05,935 - INFO - Listando arquivos no bucket 'preco-de-casas-projeto' com prefixo 'bronze/'...
+2025-01-13 15:08:05,953 - INFO - Arquivos na pasta bronze/: ['bronze/preco_de_casas.csv']
+2025-01-13 15:08:05,953 - INFO - Baixando arquivo do S3: bronze/preco_de_casas.csv para data/bronze/preco_de_casas.csv
+2025-01-13 15:08:05,954 - INFO - Iniciando download do arquivo 'bronze/preco_de_casas.csv' para' data/bronze/preco_de_casas.csv'...
+2025-01-13 15:08:06,005 - INFO - Arquivo 'bronze/preco_de_casas.csv' baixado com sucesso para 'data/bronze/preco_de_casas.csv'.
+2025-01-13 15:08:06,005 - INFO - Arquivo bronze/preco_de_casas.csv baixado com sucesso.
+2025-01-13 15:08:06,005 - INFO - Arquivo bronze/preco_de_casas.csv lido com sucesso.
+2025-01-13 15:08:06,005 - INFO - Lendo o arquivo data/bronze/preco_de_casas.csv da camada Bronze.
+2025-01-13 15:08:06,027 - INFO - Arquivo bronze/preco_de_casas.csv carregado com sucesso.
+2025-01-13 15:08:06,027 - INFO - Iniciando o processo de limpeza e transformação dos dados.
+2025-01-13 15:08:06,029 - INFO - Coluna 'Id' removida.
+2025-01-13 15:08:06,039 - INFO - Valores ausentes tratados com preenchimento padrão (0).
+2025-01-13 15:08:06,041 - INFO - Coluna 'MSZoning' convertida para tipo categórico.
+2025-01-13 15:08:06,042 - INFO - Nova coluna 'PricePerLotArea' criada com sucesso.
+2025-01-13 15:08:06,042 - INFO - Processo de limpeza e transformação concluído.
+2025-01-13 15:08:06,042 - INFO - Salvando os dados limpos em: data/silver/preco_de_casas.csv
+2025-01-13 15:08:06,081 - INFO - Arquivo preco_de_casas.csv salvo com sucesso na camada Prata.
+2025-01-13 15:08:06,081 - INFO - Iniciando upload do arquivo 'preco_de_casas.csv' para 'silver/preco_de_casas.csv'...
+2025-01-13 15:08:06,120 - INFO - Arquivo 'preco_de_casas.csv' enviado com sucesso para 'silver/preco_de_casas.csv'.
+2025-01-13 15:08:06,120 - INFO - Arquivo preco_de_casas.csv enviado com sucesso para o bucket S3 camada silver.
+2025-01-13 15:08:06,120 - INFO - Lendo os arquivos da camada Prata para consolidação.
+2025-01-13 15:08:06,122 - INFO - Lendo arquivo: data/silver/preco_de_casas.csv
+2025-01-13 15:08:06,146 - INFO - Todos os arquivos foram consolidados com sucesso.
+2025-01-13 15:08:06,146 - INFO - Iniciando o processo de agregação e cálculo avançado.
+2025-01-13 15:08:06,156 - INFO - Agregações realizadas com sucesso.
+2025-01-13 15:08:06,156 - INFO - Salvando os dados finais em: data/gold/preco_de_casas.csv
+2025-01-13 15:08:06,157 - INFO - Arquivo preco_de_casas.csv salvo com sucesso na camada Ouro.
+2025-01-13 15:08:06,157 - INFO - Iniciando upload do arquivo 'preco_de_casas.csv' para 'gold/preco_de_casas.csv'...
+2025-01-13 15:08:06,268 - INFO - Arquivo 'preco_de_casas.csv' enviado com sucesso para 'gold/preco_de_casas.csv'.
+2025-01-13 15:08:06,268 - INFO - Arquivo preco_de_casas.csv enviado com sucesso para o bucket S3 camada gold.
+2025-01-13 15:08:06,268 - INFO - Subindo o arquivo de log logs/housing_pipeline_2025-01-13_15-08:05.log para o bucket S3.
+2025-01-13 15:08:06,269 - INFO - Iniciando upload do arquivo 'logs/housing_pipeline_2025-01-13_15-08:05.log' para 'logs/2025/01/housing_pipeline_2025-01-13_15-08:05.log'...
+2025-01-13 15:08:06,311 - INFO - Arquivo 'logs/housing_pipeline_2025-01-13_15-08:05.log' enviado com sucesso para 'logs/2025/01/housing_pipeline_2025-01-13_15-08:05.log'.
+2025-01-13 15:08:06,311 - INFO - Aplicação finalizada com sucesso.
